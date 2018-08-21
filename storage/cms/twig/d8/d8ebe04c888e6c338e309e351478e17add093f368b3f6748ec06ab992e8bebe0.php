@@ -28,7 +28,7 @@ class __TwigTemplate_064972f6924e42eef6a44433f619c91f14fe24708d9671569cb0335cf66
         // line 3
         echo "<div class=\"dropdown\">
   <button class=\"projlist\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Wybór Inwestycji
+    Wybór<P> Inwestycji
   </button>
     <div class=\"dropdown-menu ddmenu\" aria-labelledby=\"dropdownMenuButton\">
 \t\t";
@@ -98,7 +98,7 @@ class __TwigTemplate_064972f6924e42eef6a44433f619c91f14fe24708d9671569cb0335cf66
 {% framework extras %}
 <div class=\"dropdown\">
   <button class=\"projlist\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-    Wybór Inwestycji
+    Wybór<P> Inwestycji
   </button>
     <div class=\"dropdown-menu ddmenu\" aria-labelledby=\"dropdownMenuButton\">
 \t\t{% for code,name in ev %}

@@ -1,0 +1,42 @@
+1534417735a:1:{s:27:"deals/CreateReservation.htm";a:6:{s:8:"fileName";s:27:"deals/CreateReservation.htm";s:7:"content";s:549:"[Items]
+==	
+	<label>Kreator Umowy</label>
+	<form class="form-horizontal" data-request="onDealCreate" data-request-success="alert('Created')">
+ <input type="hidden" name="_handler" value="onSave">
+  {{ form_token() }}
+  {{ form_sessionKey() }}
+<fieldset>
+
+<!-- Form Name -->
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Create"></label>
+  <div class="col-md-4">
+    <button id="Create" name="Create" class="btn btn-primary">Utwórz Umowę</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+";s:5:"mtime";i:1534412540;s:6:"markup";s:532:"<label>Kreator Umowy</label>
+	<form class="form-horizontal" data-request="onDealCreate" data-request-success="alert('Created')">
+ <input type="hidden" name="_handler" value="onSave">
+  {{ form_token() }}
+  {{ form_sessionKey() }}
+<fieldset>
+
+<!-- Form Name -->
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Create"></label>
+  <div class="col-md-4">
+    <button id="Create" name="Create" class="btn btn-primary">Utwórz Umowę</button>
+  </div>
+</div>
+
+</fieldset>
+</form>";s:4:"code";N;s:5:"Items";a:0:{}}}

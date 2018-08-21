@@ -1,0 +1,102 @@
+1534857695a:1:{s:21:"clients/myclients.htm";a:6:{s:8:"fileName";s:21:"clients/myclients.htm";s:7:"content";s:1217:"
+[All]
+==
+<?php
+use dominik\clients\components\All;
+	function onStart() { $this->prepareVars();
+}
+	function prepareVars(){
+	$this['ev4'] = All::onMy();
+		
+	}
+?>
+==
+Wszyscy Klienci
+
+<table id="table" class="display">
+    <thead>
+        <tr>
+            <th>Id </th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>E-mail</th>
+            <th>Numer telefonu </th>
+            <th>Adres</th>
+            <th>Data urodzenia</th>
+            <th>Zgoda na oferty</th>
+        </tr>
+    </thead>
+    <tbody>
+    	
+    	{% for id in ev4 %}
+        <tr id="tableon">
+            <td>{{id.id}}</td>
+            <td>{{id.firstname}}</td>
+            <td>{{id.lastname}}</td>
+            <td>{{id.email}}</td>
+              <td>{{id.phone}}</td>
+            <td>{{id.street}} {{id.number}} {{id.citycode}} {{id.city}}</td>
+            <td>{{id.borndate}}</td>
+            <td>{% if id.offer_agree =='1' %}
+                Tak
+{% else %}
+    Nie
+{% endif %}</td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready( function () {
+    var table= $('#table').DataTable();
+
+} );
+</script>";s:5:"mtime";i:1533889500;s:6:"markup";s:1040:"Wszyscy Klienci
+
+<table id="table" class="display">
+    <thead>
+        <tr>
+            <th>Id </th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>E-mail</th>
+            <th>Numer telefonu </th>
+            <th>Adres</th>
+            <th>Data urodzenia</th>
+            <th>Zgoda na oferty</th>
+        </tr>
+    </thead>
+    <tbody>
+    	
+    	{% for id in ev4 %}
+        <tr id="tableon">
+            <td>{{id.id}}</td>
+            <td>{{id.firstname}}</td>
+            <td>{{id.lastname}}</td>
+            <td>{{id.email}}</td>
+              <td>{{id.phone}}</td>
+            <td>{{id.street}} {{id.number}} {{id.citycode}} {{id.city}}</td>
+            <td>{{id.borndate}}</td>
+            <td>{% if id.offer_agree =='1' %}
+                Tak
+{% else %}
+    Nie
+{% endif %}</td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready( function () {
+    var table= $('#table').DataTable();
+
+} );
+</script>";s:4:"code";s:147:"use dominik\clients\components\All;
+	function onStart() { $this->prepareVars();
+}
+	function prepareVars(){
+	$this['ev4'] = All::onMy();
+		
+	}";s:3:"All";a:0:{}}}

@@ -74,8 +74,27 @@ jQuery(document).ready(function($){
 
 
 })(jQuery);
+// $.fn.dataTable.ext.search.push(
+//     function( settings, data, dataIndex ) {
+//         var active = parseInt( $('#active').val(), 10 );
+//         var age = parseFloat( data[4] ) || 0; // use data for the age column
+ 
+//         if ( ( isNaN( active ) ) ||
+//              ( age = active ) )
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+// );
 $(document).ready( function () {
-    var table= $('#table').DataTable();
+    var table= $('#table').DataTable({
+        "pageLength": 25
+}
+        );
+    $('#active').keyup( function() {
+        table.draw();
+    } );
 
 } );
 

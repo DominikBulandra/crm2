@@ -1,5 +1,5 @@
 <?php 
-use dominik\projects\Models\places;use dominik\projects\Models\cells;use dominik\projects\Models\buildings;class Cms5b28be3227321085450766_c4a230cf049de809f25a84e66c4c39e8Class extends \Cms\Classes\PageCode
+use dominik\projects\Models\places;use dominik\projects\Models\cells;use dominik\projects\Models\buildings;class Cms5b6c3b84b45dd622011485_26d711f71394c2b7b0d01c2d32656049Class extends \Cms\Classes\PageCode
 {
 
 	

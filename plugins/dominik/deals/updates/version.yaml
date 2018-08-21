@@ -15,3 +15,21 @@
 1.0.6:
     - 'Updated table dominik_deals_deal_type'
     - builder_table_update_dominik_deals_deal_type.php
+1.0.7:
+    - 'Created table dominik_deals_clients'
+    - builder_table_create_dominik_deals_clients.php
+1.0.8:
+    - 'Created table dominik_deals_places'
+    - builder_table_create_dominik_deals_places.php
+1.0.9:
+    - 'Created table dominik_deals_cells'
+    - builder_table_create_dominik_deals_cells.php
+1.0.10:
+    - 'Updated table dominik_deals_deal'
+    - builder_table_update_dominik_deals_deal_3.php
+1.0.11:
+    - 'Updated table dominik_deals_deal'
+    - builder_table_update_dominik_deals_deal_4.php
+1.0.12:
+    - 'Updated table dominik_deals_deal'
+    - builder_table_update_dominik_deals_deal_5.php

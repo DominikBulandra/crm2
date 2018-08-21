@@ -1,0 +1,56 @@
+1534856853a:1:{s:29:"datatable/apartmentdetail.htm";a:6:{s:8:"fileName";s:29:"datatable/apartmentdetail.htm";s:7:"content";s:567:"
+[Projectslist]
+==
+  <?php
+
+    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }
+?>
+==
+
+  <div class="row">
+    <div class="col-sm-6" style="background-color: #FFF44F; min-height: 1000px; ">
+      <H1>Lokal:</H1>
+{{dump(value)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}  
+</P>
+    </div>
+    <div class="col-sm-6" style="background-color: #DBAB04; min-height: 1000px;">
+      <H1>Dokumenty</H1>
+    </div>
+  </div>
+
+";s:5:"mtime";i:1534840872;s:6:"markup";s:374:"<div class="row">
+    <div class="col-sm-6" style="background-color: #FFF44F; min-height: 1000px; ">
+      <H1>Lokal:</H1>
+{{dump(value)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}  
+</P>
+    </div>
+    <div class="col-sm-6" style="background-color: #DBAB04; min-height: 1000px;">
+      <H1>Dokumenty</H1>
+    </div>
+  </div>";s:4:"code";s:142:"    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }";s:12:"Projectslist";a:0:{}}}

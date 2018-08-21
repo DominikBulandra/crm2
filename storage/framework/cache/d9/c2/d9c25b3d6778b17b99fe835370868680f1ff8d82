@@ -1,0 +1,35 @@
+1534769832a:1:{s:18:"clients/client.htm";a:6:{s:8:"fileName";s:18:"clients/client.htm";s:7:"content";s:270:"
+[All]
+==
+<?php
+
+    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }
+?>
+==
+{{dump(data)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}";s:5:"mtime";i:1534167463;s:6:"markup";s:96:"{{dump(data)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}";s:4:"code";s:142:"    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }";s:3:"All";a:0:{}}}

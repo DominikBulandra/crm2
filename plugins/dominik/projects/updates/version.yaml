@@ -78,3 +78,9 @@
 1.0.27:
     - 'Updated table dominik_projects_places'
     - builder_table_update_dominik_projects_places_3.php
+1.0.28:
+    - 'Created table dominik_projects_'
+    - builder_table_create_dominik_projects_.php
+1.0.29:
+    - 'Drop table dominik_projects_'
+    - builder_table_delete_dominik_projects_.php

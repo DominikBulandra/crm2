@@ -19,8 +19,8 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("session"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        echo "<h2 class=\"ui header\" style=\"margin-top:40px;\">Apartments </h2>
-
+        // line 2
+        echo "
 <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <style>
@@ -37,49 +37,60 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 </style>
-
-<table id=\"table\" class=\"display\">
+<div id='myDiv2' style=\"margin-top: 30px;\">
+  <input name=\"active\" id=\"active\" type=\"text\">
+<table id=\"table\" class=\"display compact\">
     <thead>
         <tr>
             <th>Id </th>
             <th>Oznaczenie</th>
             <th>cell id</th>
             <th>Edycja</th>
+            <th>Aktywny</th>
         </tr>
     </thead>
     <tbody>
     \t
     \t";
-        // line 31
+        // line 33
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["ev4"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["id"]) {
-            // line 32
+            // line 34
             echo "        <tr id=\"tableon\">
             <td>";
-            // line 33
+            // line 35
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 34
+            // line 36
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "notation", array()), "html", null, true);
             echo "</td>
             <td>";
-            // line 35
+            // line 37
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "cell_id", array()), "html", null, true);
             echo "</td>
             <td><button id=\"modalb\" onclick=\"loadDoc()\">test</button><button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target='#exampleModal";
-            // line 36
+            // line 38
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "'>Szczegóły</button>
-            <button id=\"addc\" onclick=\"addCookie('";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
-            echo "','";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "notation", array()), "html", null, true);
-            echo "')\">dodaj do koszyka</button>
+             ";
+            // line 39
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "isactive", array()) == "1")) {
+                // line 40
+                echo "               <button id=\"addc\" onclick=\"addCookie('";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
+                echo "','";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "notation", array()), "html", null, true);
+                echo "')\">dodaj do koszyka</button>
+
+";
+            }
+            // line 42
+            echo "                    
+
 <div class=\"modal fade\" id=\"exampleModal";
-            // line 38
+            // line 44
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
   <div class=\"modal-dialog\" role=\"document\">
@@ -92,28 +103,28 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
       </div>
       <div class=\"modal-body\">
           ";
-            // line 48
+            // line 54
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "
           <ul class=\"nav nav-tabs\"id=\"tabContent\">
               <li><a href=\"#details";
-            // line 50
+            // line 56
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">Karta lokalu</a></li>
               <li><a href=\"#access-security";
-            // line 51
+            // line 57
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">Dokumenty</a></li>
               <li><a href=\"#networking";
-            // line 52
+            // line 58
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">Finanse</a></li>
                 <li><a href=\"#plan";
-            // line 53
+            // line 59
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">Plan</a></li>
               <li><a href=\"#wykonczenie";
-            // line 54
+            // line 60
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">Wykończenie</a></li>
             </ul>
@@ -128,7 +139,7 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
             
               
               <div class=\"tab-pane fade\" id=\"details";
-            // line 66
+            // line 72
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\">
                 <DIV id='displaydiv' style=\"display: none;\"><P>display none</P></DIV>
@@ -138,14 +149,14 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
                       <tr>
                         <td>Oznaczenie</td>
                         <td><input id='EditInput' name='id' value='";
-            // line 73
+            // line 79
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "notation", array()), "html", null, true);
             echo "' readonly='readonly'></td>
                       </tr>
                       <tr>
                         <td>Piętro</td>
                         <td><input  id='EditInput' name='floor' value='";
-            // line 77
+            // line 83
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "floor", array()), "html", null, true);
             echo "' readonly='readonly'></td>
                         
@@ -153,7 +164,7 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
                       <tr>
                         <td>Cena</td>
                         <td><input  id='EditInput' name='price' value='";
-            // line 82
+            // line 88
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "price", array()), "html", null, true);
             echo "' readonly='readonly'></td>
                        
@@ -180,22 +191,22 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
 
               </div>
               <div class=\"tab-pane fade\" id=\"access-security";
-            // line 106
+            // line 112
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\">
                <P>Lista dokumentów:</P>
             </div> 
             
               <div class=\"tab-pane fade\" id=\"plan";
-            // line 110
+            // line 116
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\">
                   ";
-            // line 111
+            // line 117
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "notation", array()), "html", null, true);
             echo "
               ";
-            // line 112
+            // line 118
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("places/places"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
@@ -203,7 +214,7 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
               </div> 
            
               <div class=\"tab-pane fade\" id=\"wykonczenie";
-            // line 115
+            // line 121
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\">
               wykonczenia
@@ -213,7 +224,7 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
       
            
               <div class=\"tab-pane fade\" id=\"networking";
-            // line 122
+            // line 128
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "id", array()), "html", null, true);
             echo "\">
               networking
@@ -230,13 +241,28 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
 
 
                                     </td>
+                                    <td>
+                                      ";
+            // line 144
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["id"], "isactive", array()) == "1")) {
+                // line 145
+                echo "                Tak
+";
+            } else {
+                // line 147
+                echo "    Nie
+";
+            }
+            // line 149
+            echo "                                      
+                                    </td>
         </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['id'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 139
+        // line 153
         echo "        
     </tbody>
 </table>
@@ -265,6 +291,7 @@ class __TwigTemplate_6437f47669e4e36ffd4125da79b0fb998fea74156266f31fe1499f0fcf2
   </div>
 
   <button id=\"editapart\">Zmień</button>
+</div>
 <script type=\"text/javascript\">
 
  var dialog, form;
@@ -325,8 +352,33 @@ function addCookie(c,notation){
   var y = document.cookie;
   var html=\"\";
   var res = y.split(\";\");
-  for (var i = 0, len = res.length; i < len; i++) {
+   for (var i = 0, len = res.length; i < len; i++) {
+     
     if(res[i].includes(\"basket\"))
+    {
+      html += (res[i]);
+      html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
+     
+  html += (\"<P>-------</P>\");
+    }
+ 
+}
+ html += (\"<P>Komórki:</P>\");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes(\"cell\"))
+    {
+      html += (res[i]);
+      html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
+     
+  html += (\"<P>-------</P>\");
+    }
+ 
+}
+html += (\"<P>Parking/Garaż:</P>\");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes(\"garage\"))
     {
       html += (res[i]);
       html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
@@ -340,6 +392,40 @@ function addCookie(c,notation){
   
 alert(\"dodano do koszyka \"+c);
 }
+
+  \$(document).ready( function () {
+    
+    \$('#table tr').bind('mouseover', function(e) {
+    \$(e.currentTarget).children('td, th').css('background-color','#FFDF64');});
+    \$('#table tr').bind('mouseleave', function(e) {
+      var str=\$(e.currentTarget).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2))
+     {
+     \$(e.currentTarget).children('td').css('background-color','#DC0044');
+     }
+     else{
+    \$(e.currentTarget).children('td, th').css('background-color','#FFF');
+  };
+});
+    \$('#table tr').bind('dblclick', function(e) {
+    //\$(e.currentTarget).children('td, th').css('background-color','#FFDF64');
+    //alert(\$(e.currentTarget).children('td').eq(0).text())
+    \$.request('onApartmentClick', {data: {id: \$(e.currentTarget).children('td').eq(0).text()}});
+
+    });
+    \$('#table tr').each(function(){
+    //\$(this).children('td').eq(4).css('background-color','#DC0044');
+     console.log(\$(this).children('td').eq(4).html());
+     var str=\$(this).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2)) {
+       console.log(\"działa\");
+       \$(this).children('td').css('background-color','#DC0044');
+     }
+})
+
+} );
 </script>";
     }
 
@@ -355,12 +441,12 @@ alert(\"dodano do koszyka \"+c);
 
     public function getDebugInfo()
     {
-        return array (  240 => 139,  217 => 122,  207 => 115,  199 => 112,  195 => 111,  191 => 110,  184 => 106,  157 => 82,  149 => 77,  142 => 73,  132 => 66,  117 => 54,  113 => 53,  109 => 52,  105 => 51,  101 => 50,  96 => 48,  83 => 38,  77 => 37,  73 => 36,  69 => 35,  65 => 34,  61 => 33,  58 => 32,  54 => 31,  19 => 1,);
+        return array (  266 => 153,  257 => 149,  253 => 147,  249 => 145,  247 => 144,  228 => 128,  218 => 121,  210 => 118,  206 => 117,  202 => 116,  195 => 112,  168 => 88,  160 => 83,  153 => 79,  143 => 72,  128 => 60,  124 => 59,  120 => 58,  116 => 57,  112 => 56,  107 => 54,  94 => 44,  90 => 42,  81 => 40,  79 => 39,  75 => 38,  71 => 37,  67 => 36,  63 => 35,  60 => 34,  56 => 33,  23 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% component 'session' %}<h2 class=\"ui header\" style=\"margin-top:40px;\">Apartments </h2>
+        return new Twig_Source("{% component 'session' %}
 
 <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
@@ -378,14 +464,16 @@ alert(\"dodano do koszyka \"+c);
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 </style>
-
-<table id=\"table\" class=\"display\">
+<div id='myDiv2' style=\"margin-top: 30px;\">
+  <input name=\"active\" id=\"active\" type=\"text\">
+<table id=\"table\" class=\"display compact\">
     <thead>
         <tr>
             <th>Id </th>
             <th>Oznaczenie</th>
             <th>cell id</th>
             <th>Edycja</th>
+            <th>Aktywny</th>
         </tr>
     </thead>
     <tbody>
@@ -396,7 +484,11 @@ alert(\"dodano do koszyka \"+c);
             <td>{{id.notation}}</td>
             <td>{{id.cell_id}}</td>
             <td><button id=\"modalb\" onclick=\"loadDoc()\">test</button><button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target='#exampleModal{{ id.id }}'>Szczegóły</button>
-            <button id=\"addc\" onclick=\"addCookie('{{id.id}}','{{id.notation}}')\">dodaj do koszyka</button>
+             {% if id.isactive =='1' %}
+               <button id=\"addc\" onclick=\"addCookie('{{id.id}}','{{id.notation}}')\">dodaj do koszyka</button>
+
+{% endif %}                    
+
 <div class=\"modal fade\" id=\"exampleModal{{ id.id }}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
   <div class=\"modal-dialog\" role=\"document\">
     <div class=\"modal-content\">
@@ -496,6 +588,14 @@ alert(\"dodano do koszyka \"+c);
 
 
                                     </td>
+                                    <td>
+                                      {% if id.isactive =='1' %}
+                Tak
+{% else %}
+    Nie
+{% endif %}
+                                      
+                                    </td>
         </tr>
         {% endfor %}
         
@@ -526,6 +626,7 @@ alert(\"dodano do koszyka \"+c);
   </div>
 
   <button id=\"editapart\">Zmień</button>
+</div>
 <script type=\"text/javascript\">
 
  var dialog, form;
@@ -586,8 +687,33 @@ function addCookie(c,notation){
   var y = document.cookie;
   var html=\"\";
   var res = y.split(\";\");
-  for (var i = 0, len = res.length; i < len; i++) {
+   for (var i = 0, len = res.length; i < len; i++) {
+     
     if(res[i].includes(\"basket\"))
+    {
+      html += (res[i]);
+      html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
+     
+  html += (\"<P>-------</P>\");
+    }
+ 
+}
+ html += (\"<P>Komórki:</P>\");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes(\"cell\"))
+    {
+      html += (res[i]);
+      html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
+     
+  html += (\"<P>-------</P>\");
+    }
+ 
+}
+html += (\"<P>Parking/Garaż:</P>\");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes(\"garage\"))
     {
       html += (res[i]);
       html +=  '<input type=\"button\" onClick=\"delCookie(\\'' + res[i] + '\\')\" />';
@@ -601,6 +727,40 @@ function addCookie(c,notation){
   
 alert(\"dodano do koszyka \"+c);
 }
+
+  \$(document).ready( function () {
+    
+    \$('#table tr').bind('mouseover', function(e) {
+    \$(e.currentTarget).children('td, th').css('background-color','#FFDF64');});
+    \$('#table tr').bind('mouseleave', function(e) {
+      var str=\$(e.currentTarget).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2))
+     {
+     \$(e.currentTarget).children('td').css('background-color','#DC0044');
+     }
+     else{
+    \$(e.currentTarget).children('td, th').css('background-color','#FFF');
+  };
+});
+    \$('#table tr').bind('dblclick', function(e) {
+    //\$(e.currentTarget).children('td, th').css('background-color','#FFDF64');
+    //alert(\$(e.currentTarget).children('td').eq(0).text())
+    \$.request('onApartmentClick', {data: {id: \$(e.currentTarget).children('td').eq(0).text()}});
+
+    });
+    \$('#table tr').each(function(){
+    //\$(this).children('td').eq(4).css('background-color','#DC0044');
+     console.log(\$(this).children('td').eq(4).html());
+     var str=\$(this).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2)) {
+       console.log(\"działa\");
+       \$(this).children('td').css('background-color','#DC0044');
+     }
+})
+
+} );
 </script>", "C:\\xampp\\htdocs\\crm/themes/demo/pages/apartments.htm", "");
     }
 }

@@ -7,6 +7,8 @@ use Response;
 use Redirect;
 use Input;
 use Auth;
+use Log;
+use Request;
 use View;
 use Cookie;
 use Config;
@@ -97,5 +99,13 @@ class Projectslist extends ComponentBase
             
         ];
     }
+    function onApartmentClick()
+{
+    // update MySQL here
+    
+   Log::info(Request::all());
+   return ['#myDiv2' => $this->renderPartial('datatable/apartmentdetail',['data' => Request::all()])];
+
+}
     
 }

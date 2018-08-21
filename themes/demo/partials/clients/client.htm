@@ -1,0 +1,22 @@
+
+[All]
+==
+<?php
+
+    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }
+?>
+==
+{{dump(data)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}

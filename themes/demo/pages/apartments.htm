@@ -37,7 +37,7 @@ use dominik\projects\Models\places;
 	}
 ?>
 ==
-{% component 'session' %}<h2 class="ui header" style="margin-top:40px;">Apartments </h2>
+{% component 'session' %}
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,14 +55,16 @@ use dominik\projects\Models\places;
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 </style>
-
-<table id="table" class="display">
+<div id='myDiv2' style="margin-top: 30px;">
+  <input name="active" id="active" type="text">
+<table id="table" class="display compact">
     <thead>
         <tr>
             <th>Id </th>
             <th>Oznaczenie</th>
             <th>cell id</th>
             <th>Edycja</th>
+            <th>Aktywny</th>
         </tr>
     </thead>
     <tbody>
@@ -73,7 +75,11 @@ use dominik\projects\Models\places;
             <td>{{id.notation}}</td>
             <td>{{id.cell_id}}</td>
             <td><button id="modalb" onclick="loadDoc()">test</button><button type="button" class="btn btn-primary" data-toggle="modal" data-target='#exampleModal{{ id.id }}'>Szczegóły</button>
-            <button id="addc" onclick="addCookie('{{id.id}}','{{id.notation}}')">dodaj do koszyka</button>
+             {% if id.isactive =='1' %}
+               <button id="addc" onclick="addCookie('{{id.id}}','{{id.notation}}')">dodaj do koszyka</button>
+
+{% endif %}                    
+
 <div class="modal fade" id="exampleModal{{ id.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -173,6 +179,14 @@ use dominik\projects\Models\places;
 
 
                                     </td>
+                                    <td>
+                                      {% if id.isactive =='1' %}
+                Tak
+{% else %}
+    Nie
+{% endif %}
+                                      
+                                    </td>
         </tr>
         {% endfor %}
         
@@ -203,6 +217,7 @@ use dominik\projects\Models\places;
   </div>
 
   <button id="editapart">Zmień</button>
+</div>
 <script type="text/javascript">
 
  var dialog, form;
@@ -263,8 +278,33 @@ function addCookie(c,notation){
   var y = document.cookie;
   var html="";
   var res = y.split(";");
-  for (var i = 0, len = res.length; i < len; i++) {
+   for (var i = 0, len = res.length; i < len; i++) {
+     
     if(res[i].includes("basket"))
+    {
+      html += (res[i]);
+      html +=  '<input type="button" onClick="delCookie(\'' + res[i] + '\')" />';
+     
+  html += ("<P>-------</P>");
+    }
+ 
+}
+ html += ("<P>Komórki:</P>");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes("cell"))
+    {
+      html += (res[i]);
+      html +=  '<input type="button" onClick="delCookie(\'' + res[i] + '\')" />';
+     
+  html += ("<P>-------</P>");
+    }
+ 
+}
+html += ("<P>Parking/Garaż:</P>");
+   for (var i = 0, len = res.length; i < len; i++) {
+    
+    if(res[i].includes("garage"))
     {
       html += (res[i]);
       html +=  '<input type="button" onClick="delCookie(\'' + res[i] + '\')" />';
@@ -278,4 +318,38 @@ $('#basketdiv').html(html);
   
 alert("dodano do koszyka "+c);
 }
+
+  $(document).ready( function () {
+    
+    $('#table tr').bind('mouseover', function(e) {
+    $(e.currentTarget).children('td, th').css('background-color','#FFDF64');});
+    $('#table tr').bind('mouseleave', function(e) {
+      var str=$(e.currentTarget).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2))
+     {
+     $(e.currentTarget).children('td').css('background-color','#DC0044');
+     }
+     else{
+    $(e.currentTarget).children('td, th').css('background-color','#FFF');
+  };
+});
+    $('#table tr').bind('dblclick', function(e) {
+    //$(e.currentTarget).children('td, th').css('background-color','#FFDF64');
+    //alert($(e.currentTarget).children('td').eq(0).text())
+    $.request('onApartmentClick', {data: {id: $(e.currentTarget).children('td').eq(0).text()}});
+
+    });
+    $('#table tr').each(function(){
+    //$(this).children('td').eq(4).css('background-color','#DC0044');
+     console.log($(this).children('td').eq(4).html());
+     var str=$(this).children('td').eq(4).html();
+      var str2='Nie';
+     if (str && str.includes(str2)) {
+       console.log("działa");
+       $(this).children('td').css('background-color','#DC0044');
+     }
+})
+
+} );
 </script>

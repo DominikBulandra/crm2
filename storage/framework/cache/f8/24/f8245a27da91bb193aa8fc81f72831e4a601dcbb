@@ -1,0 +1,98 @@
+1534842295a:1:{s:12:"deals/UD.htm";a:6:{s:8:"fileName";s:12:"deals/UD.htm";s:7:"content";s:1419:"	<label>Umowy deweloperskie</label>
+		[Items]
+==
+<?php
+use dominik\deals\components\Items;
+	function onStart() { $this->prepareVars();
+}
+	function prepareVars(){
+	$this['ev4'] = Items::onDeveloperClick();
+		
+	}
+?>
+==
+Umowy deweloperskie
+
+<table id="table" class="display">
+    <thead>
+        <tr>
+            <th>Id </th>
+            <th>Numer notarialny</th>
+            <th>Data podpisania</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+    	
+    	{% for id in ev4 %}
+        <tr id="tableon" >
+            <td id="cid">{{id.id}}</td>
+            <td>{{id.notarial}}</td>
+            <td>{{id.date}}</td>
+            
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready( function () {
+    var table= $('#table').DataTable();
+    $('#table tr').bind('mouseover', function(e) {
+    $(e.currentTarget).children('td, th').css('background-color','#FFDF64');});
+    $('#table tr').bind('mouseleave', function(e) {
+    $(e.currentTarget).children('td, th').css('background-color','#FFF');});
+    $('#table tr').bind('dblclick', function(e) {
+    //$(e.currentTarget).children('td, th').css('background-color','#FFDF64');
+    //alert($(e.currentTarget).children('td').eq(0).text())
+    $.request('onClientClick', {data: {id: $(e.currentTarget).children('td').eq(0).text()}});
+
+    });
+
+} );
+</script>";s:5:"mtime";i:1534418116;s:6:"markup";s:1189:"Umowy deweloperskie
+
+<table id="table" class="display">
+    <thead>
+        <tr>
+            <th>Id </th>
+            <th>Numer notarialny</th>
+            <th>Data podpisania</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+    	
+    	{% for id in ev4 %}
+        <tr id="tableon" >
+            <td id="cid">{{id.id}}</td>
+            <td>{{id.notarial}}</td>
+            <td>{{id.date}}</td>
+            
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready( function () {
+    var table= $('#table').DataTable();
+    $('#table tr').bind('mouseover', function(e) {
+    $(e.currentTarget).children('td, th').css('background-color','#FFDF64');});
+    $('#table tr').bind('mouseleave', function(e) {
+    $(e.currentTarget).children('td, th').css('background-color','#FFF');});
+    $('#table tr').bind('dblclick', function(e) {
+    //$(e.currentTarget).children('td, th').css('background-color','#FFDF64');
+    //alert($(e.currentTarget).children('td').eq(0).text())
+    $.request('onClientClick', {data: {id: $(e.currentTarget).children('td').eq(0).text()}});
+
+    });
+
+} );
+</script>";s:4:"code";s:161:"use dominik\deals\components\Items;
+	function onStart() { $this->prepareVars();
+}
+	function prepareVars(){
+	$this['ev4'] = Items::onDeveloperClick();
+		
+	}";s:5:"Items";a:0:{}}}

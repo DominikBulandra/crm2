@@ -40,7 +40,7 @@ class __TwigTemplate_8bdb531eb309148f6fb6095401b1f1c97e9406c86c92edadb1e2b8885b8
  
     
   </button> -->
-    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton2\"  id=\"basketdiv\">
+    <div class=\"dropdown-menu basketdiv\" aria-labelledby=\"dropdownMenuButton2\"  id=\"basketdiv\">
         <P>Zawartość koszyka:</P>
         ";
         // line 19
@@ -113,7 +113,7 @@ class __TwigTemplate_8bdb531eb309148f6fb6095401b1f1c97e9406c86c92edadb1e2b8885b8
  
     
   </button> -->
-    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton2\"  id=\"basketdiv\">
+    <div class=\"dropdown-menu basketdiv\" aria-labelledby=\"dropdownMenuButton2\"  id=\"basketdiv\">
         <P>Zawartość koszyka:</P>
         {{dump(ev3)}}
             

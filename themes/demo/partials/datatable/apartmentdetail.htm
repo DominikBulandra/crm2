@@ -1,0 +1,33 @@
+
+[Projectslist]
+==
+  <?php
+
+    function onStart() { $this->prepareVars();
+}
+    
+
+    function prepareVars() {
+    $this['value'] = Session::get('data');
+  
+    }
+?>
+==
+
+  <div class="row">
+    <div class="col-sm-6" style="background-color: #FFF44F; min-height: 1000px; ">
+      <H1>Lokal:</H1>
+{{dump(value)}}
+Klient lista cech
+<P>
+{{data.id}}
+{% for id in data %}
+{{id.id}}
+{%endfor%}  
+</P>
+    </div>
+    <div class="col-sm-6" style="background-color: #DBAB04; min-height: 1000px;">
+      <H1>Dokumenty</H1>
+    </div>
+  </div>
+

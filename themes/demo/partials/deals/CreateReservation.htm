@@ -1,0 +1,22 @@
+[Items]
+==	
+	<label>Kreator Umowy</label>
+	<form class="form-horizontal" data-request="onDealCreate" data-request-success="alert('Created')">
+ <input type="hidden" name="_handler" value="onSave">
+  {{ form_token() }}
+  {{ form_sessionKey() }}
+<fieldset>
+
+<!-- Form Name -->
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Create"></label>
+  <div class="col-md-4">
+    <button id="Create" name="Create" class="btn btn-primary">Utwórz Umowę</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
